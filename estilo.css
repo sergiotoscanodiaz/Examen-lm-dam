@@ -1,0 +1,172 @@
+/* estilo de Aventura Natural, ejercicio de examen */
+/* autor: Sergio Toscano                    */
+
+
+/******************estilo general*******************/
+@font-face {font-family: Droid;
+            src:url(fuentes/DroidSans.ttf)
+            }
+
+body {font-family: Droid;}
+#wrapper { height: 500px;
+           margin: auto;}
+
+/******************estilo de header*******************/
+
+header {position:relative;       
+}
+header img {
+        width:100%;
+        height:auto;
+        opacity:0.9}
+#para-pc {display:block;}
+#para-movil {display:none;}
+
+/******************estilo de nav*******************/
+.topnav {
+overflow: hidden;
+background-color:rgb(49, 45, 45);
+}
+
+.topnav a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 1.5em;
+font-weight: bold;
+}
+
+.topnav a:hover {
+background-color: lightyellow;
+color: rgb(49, 45, 45);
+}
+
+.topnav a.active {
+background-color: lightyellow;
+color: white;
+}
+
+.topnav .icon {
+display: none;
+}
+
+/******************estilo de main*******************/
+
+main{background-color: white;
+padding: 4%;
+font-size: 1em;
+color: white;}
+
+main h1 {margin-top:0;
+ text-align: center;
+ color:rgb(255, 115, 169)} 
+
+main p {text-indent: 3em;}
+
+main .aventura-responsive {width: 25%;
+                margin: 3%}
+/******************* empieza snippet ******************/
+
+.container {
+position: relative;
+width: 50%;
+display: inline-block;
+}
+
+.image {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.overlay {
+position: absolute;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+height: 100%;
+width: 100%;
+opacity: 0;
+transition: .5s ease;
+background-color: rgba(78, 161, 191, 0.5);
+}
+
+.container:hover .overlay {
+opacity: 1;
+}
+
+.text {
+color: white;
+font-size: 2em;
+position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
+text-align: center;
+}
+/******************estilo de footer*******************/  
+footer {background-color:rgb(49, 45, 45);
+ color: white;}
+
+footer p {margin: 0;
+  padding: 18px;
+  font-size:1em;
+  text-align: center;
+  font-family: Droid;
+  }
+
+
+/******************media queries*******************/  
+
+@media screen and (max-width: 1125px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+
+@media only screen and (max-width:500px) {
+    #para-pc {display: none;}
+    #para-movil{display:block;}
+    #wrapper {width:100%;}
+    iframe {width:80vw;
+            height:60vw;}
+            
+.topnav.responsive a {
+float: none;
+display: block;
+text-align: left;
+}
+main .aventura-responsive {width: 80%;
+                    margin: 2%}
+} 
+
+@media screen and (max-width: 1125px) {
+main .aventura-responsive {width: 35%;}
+}
+
+@media screen and (max-width: 500px) {
+    main .aventura-responsive {width: 90%;}
+    }
+    
